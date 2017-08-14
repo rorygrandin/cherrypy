@@ -467,6 +467,7 @@ class ChunkedRFile(object):
                 self.buffer = self.buffer[remaining:]
             else:
                 data += self.buffer
+                self.buffer = EMPTY
 
     def readline(self, size=None):
         data = EMPTY
@@ -493,6 +494,7 @@ class ChunkedRFile(object):
             else:
                 if newline_pos == -1:
                     data += self.buffer
+                    self.buffer = EMPTY
                 else:
                     data += self.buffer[:newline_pos]
                     self.buffer = self.buffer[newline_pos:]
