@@ -1759,7 +1759,7 @@ class HTTPServer(object):
     timeout = 10
     """The timeout in seconds for accepted connections (default 10)."""
 
-    version = "CherryPy/3.8.0"
+    version = "CherryPy/3.8.0-j5int1"
     """A version string for the HTTPServer."""
 
     software = None
